@@ -1,0 +1,31 @@
+*{
+	border: 1px solid #333;
+	border-radius: 5px;
+}
+
+.flexbox{
+	display: flex;
+}
+
+.flex_column{
+	flex-direction:column;
+}
+
+.container{
+	width: 890px !important;
+}
+
+article > *{
+	height: 400px;
+}
+
+aside > * {
+	margin-bottom: 20px;
+}
+
+article div div{
+	width: 180px;
+	height: 150px;
+	display: block;
+	margin: auto;
+};
