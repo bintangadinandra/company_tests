@@ -21,6 +21,12 @@ article > *{
 
 aside > * {
 	margin-bottom: 20px;
+	display: table;
+}
+
+aside div div{
+	float: left;
+	margin-right: 10px
 }
 
 article div div{
@@ -28,4 +34,4 @@ article div div{
 	height: 150px;
 	display: block;
 	margin: auto;
-};
+}
