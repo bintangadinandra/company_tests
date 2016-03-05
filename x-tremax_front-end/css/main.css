@@ -28,14 +28,32 @@ aside > * {
 	display: table;
 }
 
-aside div div{
+/*aside div div{
 	float: left;
 	margin-right: 10px
-}
+}*/
 
 article div div{
 	width: 180px;
 	height: 150px;
 	display: block;
 	margin: auto;
+}
+
+article img{
+	width: 180px;
+	height: 150px;
+	object-fit: cover;
+}
+
+aside img{
+	width:100px;
+	height: 100px;
+	object-fit: cover;
+	float: left;
+	margin-right: 10px;
+}
+
+select{
+	border-color: #9b9b9b;
 }
