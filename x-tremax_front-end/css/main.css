@@ -1,14 +1,18 @@
 /**{
 	border: 1px solid #333;
 	border-radius: 5px;
-}*/
-
+}
+*/
 .flexbox{
 	display: flex;
 }
 
 .flex_column{
 	flex-direction:column;
+}
+
+.flex_column > *{
+	
 }
 
 .container{
@@ -56,4 +60,8 @@ aside img{
 
 select{
 	border-color: #9b9b9b;
+}
+
+footer li {
+	margin: auto 0px;
 }
