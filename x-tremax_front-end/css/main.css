@@ -74,6 +74,7 @@ label.custom-select {
     .custom-select select {
         display: inline-block;
         border: 1px solid #bbb;
+        border-radius: 0px;
         padding: 4px 3px 3px 5px;
         margin: 0;
         font-weight: 400;
@@ -105,6 +106,7 @@ label.custom-select {
         right: 0;
         bottom: 0;
         background: #9e0039;
+        -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
         color: white;
         
         pointer-events:none;
