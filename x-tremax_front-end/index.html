@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-
+	<meta charset='utf-8'>
 	<!-- Link for Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -44,29 +44,29 @@
 			<section class='col-sm-9' style='border-right: 1px solid #333'>
 				<div id='map' style='height: 500px; margin-bottom: 24px'></div>
 				<div class='flexbox' style='height: 20px; margin-bottom: 90px; justify-content: space-around'>
-					<div>
-						<label>Type</label>
+					<label class='custom-select'>Type
 						<select style='width:88px'>
-						  <option value="all">All</option>
+						  <option value="all">ALL</option>
 						</select>
-					</div>
+					</label>
+
+					<label class='custom-select'>Category
+						<select style='width:88px'>
+						  <option value="all">ALL</option>
+						</select>
+					</label>
 
 					<div>
-						<label>Category</label>
-						<select style='width:88px'>
-						  <option value="all">All</option>
-						</select>
-					</div>
-
-					<div>
-						<label>From</label>
-						<select style='width:88px'>
-						  <option value="all">17 APR</option>
-						</select>
-						<label>To</label>
-						<select style='width:88px'>
-						  <option value="all">17 APR</option>
-						</select>
+						<label class='custom-select'>From
+							<select style='width:88px'>
+							  <option value="all">17 APR</option>
+							</select>
+						</label>
+						<label class='custom-select'>To
+							<select style='width:88px'>
+							  <option value="all">17 APR</option>
+							</select>
+						</label>
 					</div>
 				</div>
 				<article class='row' style='margin:0px'>

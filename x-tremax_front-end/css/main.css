@@ -1,8 +1,8 @@
 /**{
 	border: 1px solid #333;
 	border-radius: 5px;
-}
-*/
+}*/
+
 .flexbox{
 	display: flex;
 }
@@ -12,7 +12,7 @@
 }
 
 .flex_column > *{
-	
+
 }
 
 .container{
@@ -65,3 +65,51 @@ select{
 footer li {
 	margin: auto 0px;
 }
+
+label.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+    .custom-select select {
+        display: inline-block;
+        border: 1px solid #bbb;
+        padding: 4px 3px 3px 5px;
+        margin: 0;
+        font-weight: 400;
+        height: 27px;
+        font-size: 0.8em;
+        outline:none; /* remove focus ring from Webkit */
+        line-height: 1.2;
+        background: #fff;
+        
+        -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
+    }
+
+    /* for Webkit's CSS-only solution */
+    @media screen and (-webkit-min-device-pixel-ratio:0) { 
+        .custom-select select {
+            padding-right:30px;    
+        }
+    }
+    
+    /* Select arrow styling */
+    .custom-select:after {
+        content: "▾";
+        text-align: center;
+        width:27px;
+        height: 27px;
+        line-height: 27px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #9e0039;
+        color: white;
+        
+        pointer-events:none;
+    }
+    
+    .no-pointer-events .custom-select:after {
+        content: none;
+    }
