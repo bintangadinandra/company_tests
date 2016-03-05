@@ -16,7 +16,7 @@
 }
 
 .container{
-	width: 890px !important;
+	width: 960px !important;
     /*padding: 0px 10px !important;*/
 }
 
@@ -75,6 +75,10 @@ select{
 
 footer li {
 	margin: auto 0px;
+}
+
+footer a{
+    color: white;
 }
 
 label.custom-select {
