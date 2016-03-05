@@ -17,6 +17,17 @@
 
 .container{
 	width: 890px !important;
+    /*padding: 0px 10px !important;*/
+}
+
+nav li a{
+	color: black;
+	font-size: 0.9em;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
 }
 
 #map{
@@ -105,7 +116,7 @@ label.custom-select {
         top: 0;
         right: 0;
         bottom: 0;
-        background: #9e0039;
+        background: #a60b43;
         -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
         color: white;
         
@@ -114,4 +125,28 @@ label.custom-select {
     
     .no-pointer-events .custom-select:after {
         content: none;
+    }
+
+    form input{
+    	padding-left: 5px;
+    	font-size: 0.8em;
+    	height: 25px;
+    }
+ 
+    .search-button {
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
     }

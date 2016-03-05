@@ -5,33 +5,51 @@
 	<meta charset='utf-8'>
 	<!-- Link for Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<header class='container-fluid' style='padding:0px'>
-		<div style='background: #3faeb7'>
+		<div style='background: #22bbc8 url(img/texture-top.png) no-repeat'>
 			<div class='container'>
-				<div class='row' style='height:170px; padding-bottom:20px'>
-					<div class='col-sm-2' style='height:80px'>
+				<div class='row vertical-align' style='height:170px; padding-bottom:20px'>
+					<div class='col-sm-2' style='height:80px; margin-top:20px'>
+						<img src="img/logo-top.png">
 					</div>
-					<div class='col-sm-4 col-sm-offset-6' style='height:30px'>
+					<div class='col-sm-4 col-sm-offset-6' style='height:30px;align-self: flex-end; display:inline-block'>
+						<!-- <div class="input-group">
+					      <input type="text" class="form-control" placeholder="Search for...">
+					      <span class="input-group-btn">
+					        <button class="btn btn-default" type="button">Go!</button>
+					      </span>
+					    </div> -->
+					    <img src="img/gylph-left.png">
+					    <form class="form-search form-horizontal pull-right">
+		                    <input type="text" placeholder="">
+		                    <button type="submit" class="btn search-button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></i></button>
+			            </form>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div style='background: #fff; box-shadow: 0px 0px 10px #333; position:absolute; width: 100%'>
+		<div style='background: #fff; box-shadow: 0px 0px 20px #333; position:absolute; width: 100%'>
 			<nav class='container flexbox flex_column' style='height:40px;'> 
 				<div class='row' style='margin:auto 15px'>
-					<ul class='list-inline flexbox col-sm-10 col-sm-offset-1' style='justify-content: space-around;margin-bottom:0px;'>
+					<ul class='list-inline flexbox col-sm-10 col-sm-offset-1' style='justify-content: space-between;margin-bottom:0px;'>
+						<img src="img/clock.png">
 						<li><a href="">Home</a></li>
+						<img src="img/clock.png">
 						<li><a href="">Lorem</a></li>
+						<img src="img/clock.png">
 						<li><a href="">Ipsum</a></li>
+						<img src="img/clock.png">
 						<li><a href="">Dolor</a></li>
+						<img src="img/clock.png">
 					</ul>
 				</div>
 			</nav>
 		</div>
-		<div style='background: #9e0039; color: white; padding-top:40px'>
+		<div style='background: #a60b43 url(img/texture.png); color: white; padding-top:40px'>
 			<div class='container' style='height:170px; padding-top:20px'>
 				<p>Home</p>
 				<h1>Attractions</h1>
@@ -39,10 +57,13 @@
 		</div>
 	</header>
 
-	<div class='container'>
+	<div class='container' style='position:relative; top: -40px'>
+		<div style='height:54px; background: white; padding: 0px 20px'>
+			<img src="img/socmed.jpg" class='pull-right' style='margin-top:20px'>
+		</div>
 		<div class='row'>
-			<section class='col-sm-9' style='border-right: 1px solid #333'>
-				<div id='map' style='height: 500px; margin-bottom: 24px'></div>
+			<section class='col-sm-9' style='border-right: 1px solid #333;'>
+				<div id='map' style='height: 500px; width: ; margin-bottom: 24px'></div>
 				<div class='flexbox' style='height: 20px; margin-bottom: 90px; justify-content: space-around'>
 					<label class='custom-select'>Type
 						<select style='width:88px'>
