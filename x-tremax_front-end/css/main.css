@@ -3,6 +3,10 @@
 	border-radius: 5px;
 }*/
 
+body{
+    font-family: 'Lato', sans-serif;
+}
+
 .flexbox{
 	display: flex;
 }
@@ -21,8 +25,9 @@
 }
 
 nav li a{
+    margin: auto;
 	color: black;
-	font-size: 0.9em;
+	font-size: 1.2em;
 }
 
 .vertical-align {
@@ -38,9 +43,14 @@ article > *{
 	height: 400px;
 }
 
-aside > * {
-	margin-bottom: 20px;
+aside > div {
+	margin: 20px 0px;
+    padding-right: 10px;
 	display: table;
+}
+
+aside {
+    font-size: 1.3em;
 }
 
 /*aside div div{
@@ -66,7 +76,7 @@ aside img{
 	height: 100px;
 	object-fit: cover;
 	float: left;
-	margin-right: 10px;
+	margin-right: 20px;
 }
 
 select{
@@ -101,8 +111,8 @@ label.custom-select {
     position: absolute;
     left: 0px !important;
 }*/
-/*
-.gm-style-iw {
+
+/*.gm-style-iw {
   width: auto!important;
   height: auto!important;
   left: 0!important;
@@ -112,6 +122,16 @@ label.custom-select {
   overflow: hidden!important;
   border-radius: 3px;
 }*/
+
+.gm-style-iw {
+   width: 250px !important;
+   top: 15px !important; // move the infowindow 15px down
+   left: 0 !important;
+   background-color: #fff;
+   box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+   border: 1px solid rgba(72, 181, 233, 0.6);
+   border-radius: 2px 2px 0 0;
+}
 
 
 
@@ -183,3 +203,4 @@ label.custom-select {
     .search-query:focus + button {
         z-index: 3;   
     }
+
