@@ -1,4 +1,7 @@
 //Initiate Google Map
+var data = JSON.parse("data.json");
+console.log(data[0].name);
+
 function initMap(){
 	var mapDiv = document.getElementById('map');
 	var myLatLng = {lat:  1.334816, lng: 103.850744};
@@ -15,7 +18,7 @@ function initMap(){
   	});
 
   	var marker2 = new google.maps.Marker({
-    position: myLatLng,
+    position: myLatLng2,
     map: map,
     title: 'Hello World!'
   	});
