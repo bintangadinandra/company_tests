@@ -1,0 +1,22 @@
+[ 
+	{
+		"name" :"Ang Mo Kio Heritage Trail",
+		"image" : "imageside1.jpg"
+	},
+	{
+		"name" : "Romance by the River",
+		"image" : "imageside2.jpg"
+	},
+	{
+		"name" :"Shopping armedian Street",
+		"image" : "imageside3.jpg"
+	},
+	{
+		"name" :"Hill Street School Trail",
+		"image" : "imageside4.jpg"
+	},
+	{
+		"name" :"SMU Mugging Spots",
+		"image" : "imageside5.jpeg"
+	}
+]

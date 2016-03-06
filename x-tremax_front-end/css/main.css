@@ -81,10 +81,39 @@ footer a{
     color: white;
 }
 
+
 label.custom-select {
     position: relative;
     display: inline-block;
 }
+
+/*.gm-style-iw {
+   overflow: hidden !important; 
+   line-height: 1.35;
+   white-space: nowrap;
+}*/
+
+/*.gm-style .gm-style-iw {
+    font-weight: 300;
+    font-size: 13px;
+    overflow: hidden;
+    top: 0px !important;
+    position: absolute;
+    left: 0px !important;
+}*/
+/*
+.gm-style-iw {
+  width: auto!important;
+  height: auto!important;
+  left: 0!important;
+  font-size: 15px!important;
+  font-weight: normal!important;
+  top: 0!important;
+  overflow: hidden!important;
+  border-radius: 3px;
+}*/
+
+
 
     .custom-select select {
         display: inline-block;
