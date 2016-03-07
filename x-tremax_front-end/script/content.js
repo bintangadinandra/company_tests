@@ -25,7 +25,7 @@ $(document).ready(function(){
     $.getJSON("script/aside.json", function(result){
     	for (i in result){
 	    	var div = $("<div></div>");
-	    	div.append($("<img>",{src: 'img/' + result[i].image }));
+	    	div.append($("<img>",{src: 'img/' + result[i].image , alt:'aside-image'}));
 	    	div.append($("<span></span>").text(result[i].name));
 
 	    	$("aside").append(div);
