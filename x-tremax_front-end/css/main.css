@@ -1,123 +1,113 @@
+/* Layouting Helper (status: commetn)*/
 /**{
-	border: 1px solid #333;
-	border-radius: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
 }*/
 
 body{
     font-family: 'Lato', sans-serif;
 }
 
+/* Flexbox classing */
 .flexbox{
-	display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .flex_column{
-	flex-direction:column;
-}
-
-.flex_column > *{
-
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -webkit-flex-direction:column;
+      -ms-flex-direction:column;
+          flex-direction:column;
 }
 
 .container{
-	width: 960px !important;
+  width: 960px !important;
     /*padding: 0px 10px !important;*/
 }
 
+/* Custom Search Form */
+form input{
+  padding-left: 5px;
+  font-size: 0.8em;
+  height: 25px;
+  width: 188px;
+}
+
+.search-button {
+  background: none;
+  /** belows styles are working good */
+  padding: 2px 5px;
+  margin-top: 2px;
+  position: relative;
+  left: -28px;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  border-radius: 3px;
+}
+
+.search-query:focus + button {
+    z-index: 3;   
+}
+
+/* Navigation */
 nav li a{
     margin: auto;
-	color: black;
-	font-size: 1.2em;
+  color: black;
+  font-size: 1.2em;
 }
 
-.vertical-align {
-    display: flex;
-    align-items: center;
-}
-
+/* Map Settings */
 #map{
-	background-color: #CCC;
+  background-color: #CCC;
 }
 
+/* Article and Aside */
 article > *{
-	height: 400px;
+  height: 400px;
+}
+
+article img{
+  width: 180px;
+  height: 150px;
+    display: block;
+    margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 aside > div {
-	margin: 20px 0px;
-    padding-right: 10px;
-	display: table;
+  margin: 20px 0px;
+  padding-right: 10px;
+  display: table;
 }
 
 aside {
     font-size: 1.3em;
 }
 
-/*aside div div{
-	float: left;
-	margin-right: 10px
-}*/
-
-article img{
-	width: 180px;
-	height: 150px;
-    display: block;
-    margin: auto;
-	object-fit: cover;
-}
-
 aside img{
-	width:100px;
-	height: 100px;
-	object-fit: cover;
-	float: left;
-	margin-right: 20px;
+  width:100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  float: left;
+  margin-right: 20px;
 }
 
-select{
-	border-color: #9b9b9b;
-}
-
+/*Footer Settings*/
 footer li {
-	margin: auto 0px;
+  margin: auto 0px;
 }
 
 footer a{
     color: white;
 }
 
-
-label.custom-select {
-    position: relative;
-    display: inline-block;
-}
-
-/*.gm-style-iw {
-   overflow: hidden !important; 
-   line-height: 1.35;
-   white-space: nowrap;
-}*/
-
-/*.gm-style .gm-style-iw {
-    font-weight: 300;
-    font-size: 13px;
-    overflow: hidden;
-    top: 0px !important;
-    position: absolute;
-    left: 0px !important;
-}*/
-
-/*.gm-style-iw {
-  width: auto!important;
-  height: auto!important;
-  left: 0!important;
-  font-size: 15px!important;
-  font-weight: normal!important;
-  top: 0!important;
-  overflow: hidden!important;
-  border-radius: 3px;
-}*/
-
+/* Custom Pagination */
 .pagination li a{
     color: black;
     border-radius: 0px !important;
@@ -132,16 +122,38 @@ label.custom-select {
     background: #a60b43;
 }
 
+/* Helper class */
+.vertical-align {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+/* Custom google map infowindow css(apart from jquery) */
 .gm-style-iw {
    width: 250px !important;
-   top: 15px !important; // move the infowindow 15px down
+   top: 20px !important; // move the infowindow 15px down
    left: 0 !important;
    background-color: #fff;
-   box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
-   border: 1px solid rgba(72, 181, 233, 0.6);
+   /*box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+   border: 1px solid rgba(72, 181, 233, 0.6);*/
    border-radius: 2px 2px 0 0;
 }
 
+/* ---Custom Dropdown Select--- */
+select{
+  border-color: #9b9b9b;
+}
+
+label.custom-select {
+    position: relative;
+    display: inline-block;
+}
 
 .custom-select select {
     display: inline-block;
@@ -168,48 +180,22 @@ label.custom-select {
 
 /* Select arrow styling */
 .custom-select:after {
-    content: "▾";
-    text-align: center;
-    width:27px;
-    height: 27px;
-    line-height: 27px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: #a60b43;
-    -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
-    color: white;
-    
-    pointer-events:none;
+  content: "▾";
+  text-align: center;
+  width:27px;
+  height: 27px;
+  line-height: 27px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #a60b43;
+  -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
+  color: white;
+  
+  pointer-events:none;
 }
 
 .no-pointer-events .custom-select:after {
-    content: none;
+  content: none;
 }
-
-form input{
-	padding-left: 5px;
-	font-size: 0.8em;
-	height: 25px;
-    width: 188px;
-}
-
-.search-button {
-    background: none;
-    /** belows styles are working good */
-    padding: 2px 5px;
-    margin-top: 2px;
-    position: relative;
-    left: -28px;
-    /* IE7-8 doesn't have border-radius, so don't indent the padding */
-    margin-bottom: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-
-.search-query:focus + button {
-    z-index: 3;   
-}
-

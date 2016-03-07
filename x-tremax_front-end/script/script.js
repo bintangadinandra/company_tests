@@ -1,8 +1,9 @@
 //Initiate Global Var
+//Map Marker for Thumbnail Click
 var map_marker = [];
 
 //---------------------------Load Data From JSON----------------------------
-//Sychronus
+//Synchronus
 var places;
 $.ajax({
     async: false,
@@ -10,7 +11,7 @@ $.ajax({
     datatype: "json",
     success: function(json) {
         console.log("Sychronously Success");
-        places = $.parseJSON(json);
+        places = json;
     }
 });
 
@@ -26,8 +27,9 @@ function initMap(){
 	var mapDiv = document.getElementById('map');
   var mapCenter = {lat:  1.331798, lng: 103.851315};
   var map = new google.maps.Map(mapDiv, {
-      center: mapCenter,
-        zoom: 11,
+    center: mapCenter,
+    zoom: 11,
+
   });
 
   //Load places attributes (places is from data.json)
@@ -35,19 +37,23 @@ function initMap(){
     //Initiate Infowindow
     var infowindow = new google.maps.InfoWindow({
       maxWidth: 250,
-      disableAutoPan: true
+      disableAutoPan: true,
+      disableDefaultUI: true
     });
 
     //Create marker based on paces latitude and longitude
     var marker = new google.maps.Marker({
-    position: {lat:  places[i].latitude, lng: places[i].longitude},
-    map: map,
-    icon: "img/" + i + ".png",
-    title: places[i].name});
+      position: {lat:  places[i].latitude, lng: places[i].longitude},
+      map: map,
+      icon: "img/" + i + ".png",
+      title: places[i].name,
+    });
 
     //Event Listener Whenever The User Click The Marker
     google.maps.event.addListener(marker, 'click', 
       (function(marker, i) {
+      //Reference of this return function in function (marker,i) with some modifications
+      //source: http://stackoverflow.com/questions/32798480/assign-infowindow-for-each-marker-in-google-maps
       return function() {
       var popovercontent = "<div style='width: 100%; height:350px; margin: 0px; background:white;'>" +
       "<img src='img/" + places[i].image + ".jpg' style='width:100%; height:150px; object-fit: cover; '>" + 
@@ -57,6 +63,7 @@ function initMap(){
       "<p>Lorem ipsum dolor sit amet, ad facer eripuit commune sit. Eum platonem salutandi explicari no, pro accumsan suavitate conceptam te. Enim libris</p>" +
       "<h5>Gazzete Date</h5>" + 
       "<p>20 July</p>" +
+      "<h5> More Info </h5>"
       "</div></div>";
 
       infowindow.setContent(popovercontent);
@@ -65,7 +72,7 @@ function initMap(){
       map.setCenter({lat: places[i].latitude+0.008, lng: places[i].longitude});
         if (map.getZoom!=15){
         map.setZoom(15);
-      }
+        }
       }
     })(marker, i));
 
@@ -93,12 +100,19 @@ function initMap(){
      // Remove the white background DIV
      iwBackground.children(':nth-child(4)').css({'display' : 'none'});
      iwOuter.parent().parent().css({left: '10px'});
-     // Moves the shadow of the arrow 76px to the left margin 
-     iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 130px !important;'});
+     // Moves the shadow of the arrow 131px to the left margin 
+     iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 131px !important;'});
 
-     // Moves the arrow 76px to the left margin 
-     iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'left: 130px !important;'});
-     iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(72, 181, 233, 0.6) 0px 1px 6px', 'z-index' : '1'});
+     // Moves the arrow 131px to the left margin 
+     iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'left: 131px !important;'});
+
+     //ARROW MODIFICATIONS (Experimented on my own)
+     iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'none', 'z-index' : '1'});
+     iwBackground.children(':nth-child(3)').css({'top' : '375px'});
+     iwBackground.children(':nth-child(3)').find('div').css({'width' : '30px'});
+     iwBackground.children(':nth-child(3)').children(':first-child').css({'left' : '-20px'});
+     iwBackground.children(':nth-child(3)').children(':first-child').children().css({'transform' : 'skewX(50deg)'});
+     iwBackground.children(':nth-child(3)').children(':last-child').children().css({'transform' : 'skewX(-50deg)', 'left' : '-6px'});
      // Taking advantage of the already established reference to
       // div .gm-style-iw with iwOuter variable.
       // You must set a new variable iwCloseBtn.
@@ -109,7 +123,7 @@ function initMap(){
       // Apply the desired effect to the close button
       iwCloseBtn.css({
       opacity: '1', // by default the close button has an opacity of 0.7
-      right: '42px', top: '20px', // button repositioning
+      right: '42px', top: '25px', // button repositioning
       });
 
       // The API automatically applies 0.7 opacity to the button after the mouseout event.
@@ -129,5 +143,6 @@ function myClick(id){
   google.maps.event.trigger(map_marker[id], 'click');
 }
 
+//init the map since dont have callbacks in the script
 initMap();
 
