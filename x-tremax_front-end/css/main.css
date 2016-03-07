@@ -58,16 +58,11 @@ aside {
 	margin-right: 10px
 }*/
 
-article div div{
-	width: 180px;
-	height: 150px;
-	display: block;
-	margin: auto;
-}
-
 article img{
 	width: 180px;
 	height: 150px;
+    display: block;
+    margin: auto;
 	object-fit: cover;
 }
 
@@ -123,6 +118,20 @@ label.custom-select {
   border-radius: 3px;
 }*/
 
+.pagination li a{
+    color: black;
+    border-radius: 0px !important;
+    margin: 0px 0.5px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.pagination li a.active{
+    color: white;
+    background: #a60b43;
+}
+
 .gm-style-iw {
    width: 250px !important;
    top: 15px !important; // move the infowindow 15px down
@@ -134,73 +143,73 @@ label.custom-select {
 }
 
 
+.custom-select select {
+    display: inline-block;
+    border: 1px solid #bbb;
+    border-radius: 0px;
+    padding: 4px 3px 3px 5px;
+    margin: 0;
+    font-weight: 400;
+    height: 27px;
+    font-size: 0.8em;
+    outline:none; /* remove focus ring from Webkit */
+    line-height: 1.2;
+    background: #fff;
+    
+    -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
+}
 
+/* for Webkit's CSS-only solution */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
     .custom-select select {
-        display: inline-block;
-        border: 1px solid #bbb;
-        border-radius: 0px;
-        padding: 4px 3px 3px 5px;
-        margin: 0;
-        font-weight: 400;
-        height: 27px;
-        font-size: 0.8em;
-        outline:none; /* remove focus ring from Webkit */
-        line-height: 1.2;
-        background: #fff;
-        
-        -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
+        padding-right:30px;    
     }
+}
 
-    /* for Webkit's CSS-only solution */
-    @media screen and (-webkit-min-device-pixel-ratio:0) { 
-        .custom-select select {
-            padding-right:30px;    
-        }
-    }
+/* Select arrow styling */
+.custom-select:after {
+    content: "▾";
+    text-align: center;
+    width:27px;
+    height: 27px;
+    line-height: 27px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #a60b43;
+    -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
+    color: white;
     
-    /* Select arrow styling */
-    .custom-select:after {
-        content: "▾";
-        text-align: center;
-        width:27px;
-        height: 27px;
-        line-height: 27px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background: #a60b43;
-        -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
-        color: white;
-        
-        pointer-events:none;
-    }
-    
-    .no-pointer-events .custom-select:after {
-        content: none;
-    }
+    pointer-events:none;
+}
 
-    form input{
-    	padding-left: 5px;
-    	font-size: 0.8em;
-    	height: 25px;
-    }
- 
-    .search-button {
-        background: none;
-        /** belows styles are working good */
-        padding: 2px 5px;
-        margin-top: 2px;
-        position: relative;
-        left: -28px;
-        /* IE7-8 doesn't have border-radius, so don't indent the padding */
-        margin-bottom: 0;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-    }
- 
-    .search-query:focus + button {
-        z-index: 3;   
-    }
+.no-pointer-events .custom-select:after {
+    content: none;
+}
+
+form input{
+	padding-left: 5px;
+	font-size: 0.8em;
+	height: 25px;
+    width: 188px;
+}
+
+.search-button {
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.search-query:focus + button {
+    z-index: 3;   
+}
 
