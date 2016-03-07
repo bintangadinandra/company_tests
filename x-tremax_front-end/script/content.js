@@ -1,5 +1,5 @@
 //Function to append articles and insert to HTML
-function loadarticles(cnt,targetID){
+function loadarticles(cnt){
 	for (i in cnt){
 		var div = $("<div></div>", {class: 'col-sm-4', style: 'padding:0px 26px'});
 		//add function to googlemap trigger marker click (see script.json, line 124)
@@ -10,7 +10,7 @@ function loadarticles(cnt,targetID){
 		div.append($("<p></p>", {style: "line-height:30px"}).html(cnt[i].tourtype + "<br>" +
 									   cnt[i].placetype + "<br>" +
 									   cnt[i].date));
-		$(targetID).append(div);
+		$("article").append(div);
 	}
 }
 
@@ -18,7 +18,7 @@ function loadarticles(cnt,targetID){
 $(document).ready(function(){
 	//Asychronously load DATA(places) JSON file
 	$.getJSON("script/data.json", function(result){
-        loadarticles(result, "article");
+        loadarticles(result);
     });
 
     //Asychronously load ASIDE JSON file, and append the content

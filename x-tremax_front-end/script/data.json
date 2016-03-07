@@ -6,7 +6,8 @@
 		"date": "19 July",
 		"latitude": 1.334816, 
 		"longitude": 103.850744,
-		"image": "image1"
+		"image": "image1",
+		"description": "This place is very wonderful, the christian is very kind."
 	},
 	{
 		"name": "1973 SEAP Games Village",
@@ -15,7 +16,8 @@
 		"date": "19-27 July",
 		"latitude": 1.333733, 
 		"longitude": 103.850583,
-		"image": "image2"
+		"image": "image2",
+		"description": "SEAP Games with many more games is coming. What are you capable of?"
 	},
 	{
 		"name": "Chung Hwa Medical Institution",
@@ -24,7 +26,8 @@
 		"date": "19 July",
 		"latitude": 1.331798, 
 		"longitude": 103.851315,
-		"image": "image3"
+		"image": "image3",
+		"description": "Are you sick and dont have money? Dont worry, we will help you first because your health is important"
 	},
 	{
 		"name": "Toa Payoh Town Park",
@@ -33,7 +36,8 @@
 		"date": "19 July",
 		"latitude": 1.33095, 
 		"longitude": 103.847633,
-		"image": "image4"
+		"image": "image4",
+		"description": "The Best Park in the world with high trees and squirels"
 	},
 	{
 		"name": "Toa Payoh Dragon Playground",
@@ -42,7 +46,8 @@
 		"date": "19 July",
 		"latitude": 1.331967, 
 		"longitude": 103.854367,
-		"image": "image5"
+		"image": "image5",
+		"description": "A Heavenly Place for your children with toys, slides, and sandbox"
 	},
 	{
 		"name": "Lian Shan Shuang Lin Monastery",
@@ -51,6 +56,7 @@
 		"date": "20 July",
 		"latitude": 1.329885, 
 		"longitude": 103.856462,
-		"image": "image6"
+		"image": "image6",
+		"description": "The place to find serenity while having a great workshops"
 	}
 ]
